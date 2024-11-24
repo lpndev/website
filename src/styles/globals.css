@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'DM_Sans';
+    src: url('/src/assets/fonts/DM_Sans/DMSans-Regular.ttf');
+    font-weight: 400;
+  }
+
+  @font-face {
+    font-family: 'DM_Sans';
+    src: url('/src/assets/fonts/DM_Sans/DMSans-Medium.ttf');
+    font-weight: 500;
+  }
+
+  @font-face {
+    font-family: 'Roboto_Mono';
+    src: url('/src/assets/fonts/Roboto_Mono/RobotoMono-Regular.ttf');
+    font-weight: 400;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+  }
+}
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground min-h-screen font-sans tracking-wide antialiased;
+  }
+
+  #root {
+    @apply relative flex w-full flex-col items-center;
+  }
+}
+
+@layer components {
+  .container-section {
+    @apply flex w-full max-w-screen-sm flex-col items-center justify-center p-4;
+  }
+
+  .section {
+    @apply flex w-full flex-col items-center justify-center gap-6 py-12;
+  }
+
+  .title {
+    @apply text-center text-3xl font-medium tracking-tight sm:text-4xl;
+  }
+
+  .subtitle {
+    @apply text-center text-2xl font-medium tracking-tight;
+  }
+
+  .mono {
+    @apply text-foreground/70 w-fit text-center font-mono text-[.8rem] uppercase;
+  }
+
+  .badge {
+    @apply w-fit text-nowrap rounded-full border border-zinc-200/50 bg-zinc-100 px-3.5 py-1.5 text-center font-mono text-xs dark:border-zinc-800 dark:bg-zinc-900 sm:text-sm;
+  }
+
+  .card {
+    @apply flex w-full flex-col rounded-2xl border border-zinc-200/40 bg-zinc-100/60 p-4 dark:border-zinc-800/60 dark:bg-zinc-900/60 sm:p-6;
+  }
+}
