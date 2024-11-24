@@ -40,7 +40,7 @@
   }
 
   body {
-    @apply bg-background text-foreground min-h-screen font-sans tracking-wide antialiased;
+    @apply min-h-screen bg-background font-sans tracking-wide text-foreground antialiased;
   }
 
   #root {
@@ -66,7 +66,7 @@
   }
 
   .mono {
-    @apply text-foreground/70 w-fit text-center font-mono text-[.8rem] uppercase;
+    @apply w-fit text-center font-mono text-[.8rem] uppercase text-foreground/70;
   }
 
   .badge {
